@@ -1,0 +1,83 @@
+#include<stdio.h>
+#define MAX 100
+
+int arr[MAX];
+int f=-1;
+int r=-1;
+
+void enqueue()
+{
+    int x;
+    printf("Enter the element you want to add in queue: ");
+    scanf("%d",&x);
+
+    if(f==MAX-1)
+    {
+        printf("The enqueue is not possible.\n");
+    }
+    else 
+    {
+        f=0;
+         r++;
+         arr[r]=x;
+    }
+}
+void dequeue()
+{
+    if(f==-1||f>r)
+    {
+        printf("The dequeue is not possible.\n");
+    }
+    else
+    {
+        printf("The dequeue element is: %d\n",arr[f]);
+        f++;
+    }
+}
+void print()
+{
+    if(f==-1)
+    {
+        printf("The queue is empty.\n");
+    }
+    else{
+    for (int i = f; i <= r; i++)
+    {
+        printf("The elements of the queue is: %d\n",arr[i]);
+        printf("\n");
+    }
+    }
+}
+
+int main()
+{
+    int y;
+    do
+    {
+        
+        printf("What you want to do.\n1.For enqueue\n2.For dequeue\n3.For print\n4.For exit\n");
+        printf("\nchoice: \n");
+        scanf("%d", &y);
+
+        switch (y)
+        {
+        case 1:
+            enqueue();
+            break;
+
+        case 2:
+            dequeue();
+            break;
+
+        case 3:
+            print();
+            break;
+        }
+
+    } while (y != 4);
+    {
+        printf("Thanks for using\n");
+    }
+
+    return 0;
+}
