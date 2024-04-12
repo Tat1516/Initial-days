@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main()
+{
+    int a;
+    printf("Enter which number table you wanted to print: ");
+    scanf("%d",&a);
+    int b;
+    printf("How long you wanted you table to be: ");
+    scanf("%d",&b);
+    for ( int i = 1; i <= b; i++)
+    {
+        int z=a*i;
+        printf("%d X %d = %d\n",a,i,z);
+    }
+    
+    
+    return 0;
+}
