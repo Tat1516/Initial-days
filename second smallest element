@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include<stdlib.h>
+// #include <limits.h>
+// #define MAX 100
+
+int main()
+{
+    int x;
+    int *arr = (int *)malloc(x * sizeof(int));
+    int smallest, secsmallest;
+
+    printf("Enter how many elements you want to add in the array: ");
+    scanf("%d", &x);
+    printf("Enter the elements the arry\n");
+    for (int i = 0; i < x; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    if (arr[0] < arr[1])
+    {
+        smallest = arr[0];
+        secsmallest = arr[1];
+    }
+    else
+    {
+        smallest = arr[1];
+        secsmallest = arr[0];
+    }
+
+    for (int i = 2; i < x; i++)
+    {
+        if (arr[i] < smallest)
+        {
+            secsmallest = smallest;
+            smallest = arr[i];
+        }
+        else if (arr[i] < secsmallest)
+        {
+            secsmallest = arr[i];
+        }
+    }
+
+    printf("The secondsmallest element is %d\n", secsmallest);
+}
