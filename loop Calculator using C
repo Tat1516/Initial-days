@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n1;
+    int n2;
+
+    int x;
+    do
+    {
+        printf("Enter the number one: \n");
+        scanf("%d", &n1);
+        printf("Enter the second number: \n");
+        scanf("%d", &n2);
+        printf("1.Summation\n2.Substraction\n3.Multiplication\n4.Division\n");
+        printf("what is your choice: \n");
+        scanf("%d", &x);
+
+        switch (x)
+        {
+        case 1:
+            printf("The sum is : %d\n", n1 + n2);
+            break;
+
+        case 2:
+            printf("The substraction is: %d\n", n1 - n2);
+            break;
+
+        case 3:
+            printf("The multiplication is : %d\n", n1 * n2);
+            break;
+
+        case 4:
+            printf("The division is: %d and \n The remainder is %d\n", n1 / n2, n1 % n2);
+            break;
+
+        default:
+            printf("***\n");
+            break;
+        }
+
+    } while (x != 1 || 2 || 3 || 4);
+    printf("Please check yourchoice\n");
+}
